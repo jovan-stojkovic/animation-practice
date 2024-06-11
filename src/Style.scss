@@ -88,3 +88,41 @@ nav {
     }
   }
 }
+
+.page.home {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  position: relative;
+
+  p {
+    font-size: 150px;
+    position: absolute;
+    color: rgb(90, 0, 0);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  :nth-child(1) {
+    top: -50px;
+    left: -30px;
+  }
+
+  :nth-child(2) {
+    top: 30px;
+    animation: slide-left 4s linear infinite;
+  }
+
+  :nth-child(3) {
+    top: 130px;
+    right: -30px;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(170%);
+  }
+  100% {
+    transform: translateX(-120%);
+  }
+}
