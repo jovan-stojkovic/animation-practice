@@ -1,9 +1,9 @@
 const Home = () => {
   return (
     <div className="page home">
-      <p>Brand</p>
-      <p>Experience</p>
-      <p>Studio</p>
+      <p>Vi zamislite</p>
+      <p>OSAPLAST</p>
+      <p>Mi ostvarimo</p>
     </div>
   );
 };
