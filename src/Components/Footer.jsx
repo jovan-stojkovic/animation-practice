@@ -1,8 +1,26 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const footerMotion = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      delay: 0.5,
+    },
+  },
+};
 
 const Footer = () => {
   return (
-    <footer>
+    <motion.footer
+      variants={footerMotion}
+      initial="hidden"
+      whileInView="visible"
+    >
       <div className="footer-cont">
         <div className="left">
           <p>064 000 000 0</p>
@@ -19,7 +37,7 @@ const Footer = () => {
           <Link target="_blank" to="https://www.youtube.com/"></Link>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
