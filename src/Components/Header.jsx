@@ -46,8 +46,16 @@ const Header = () => {
             <motion.div variants={navlinksMotion}>
               <NavLink to="/">Home</NavLink>
             </motion.div>
-            <motion.div variants={navlinksMotion}>
+            <motion.div variants={navlinksMotion} className="products-navlink">
               <NavLink to="/Products">Products</NavLink>
+              <div className="hidden-div">
+              <div className="hidden-div-cont">
+                <NavLink to="/Products/category-one">Kategorija 1</NavLink>
+                <NavLink to="/Products/category-two">Kategorija 2</NavLink>
+                <NavLink to="/Products/category-three">Kategorija 3</NavLink>
+                <NavLink to="/Products/category-four">Kategorija 4</NavLink>
+              </div>
+              </div>
             </motion.div>
             <motion.div variants={navlinksMotion}>
               <NavLink to="/About">About</NavLink>

@@ -62,6 +62,27 @@ nav {
         justify-content: center;
         gap: 20px;
 
+        .products-navlink {
+          position: relative;
+
+          .hidden-div {
+            position: absolute;
+            left: -20px;
+            .hidden-div-cont {
+              display: flex;
+              align-items: baseline;
+              justify-content: space-between;
+              flex-direction: column;
+              gap: 10px;
+              padding: 20px;
+              font-size: 12px;
+              width: 110%;
+              border-radius: 10px;
+              box-shadow: rgba(46, 67, 129, 0.2) 0px 8px 24px;
+            }
+          }
+        }
+
         a {
           text-decoration: none;
           color: $darkblue;
