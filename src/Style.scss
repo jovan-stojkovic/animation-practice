@@ -27,6 +27,7 @@ main {
 nav {
   width: 100%;
   height: 60px;
+  z-index: 10;
   .nav-cont {
     margin: 0 auto;
     height: 100%;
@@ -68,17 +69,38 @@ nav {
           .hidden-div {
             position: absolute;
             left: -20px;
+            padding-top: 0;
+            z-index: 10;
+            opacity: 0;
+            transition: all 0.2s;
+
             .hidden-div-cont {
               display: flex;
               align-items: baseline;
               justify-content: space-between;
               flex-direction: column;
               gap: 10px;
-              padding: 20px;
+              overflow: hidden;
+              height: 0;
+              padding: 0 20px;
               font-size: 12px;
               width: 110%;
               border-radius: 10px;
               box-shadow: rgba(46, 67, 129, 0.2) 0px 8px 24px;
+              background-color: rgba(255, 255, 255, 0.1);
+              backdrop-filter: blur(5px);
+              transition: all 0.2s;
+            }
+
+            &.show {
+              padding-top: 20px;
+              opacity: 1;
+
+              .hidden-div-cont {
+                padding: 20px;
+                height: 190px;
+                transition: all 1s;
+              }
             }
           }
         }
@@ -88,10 +110,16 @@ nav {
           color: $darkblue;
           padding: 5px 10px;
           border-radius: 50px;
+          transition: background-color 0.5s;
+          border: 1px solid white;
+
+          &:hover {
+            border: 1px solid $lightblue;
+          }
 
           &.active {
             background-color: $lightblue;
-            transition: background-color 0.5s;
+            border: 1px solid $lightblue;
           }
         }
       }
@@ -234,6 +262,70 @@ footer {
           background-image: url("/icons/youtube.svg");
         }
       }
+    }
+  }
+}
+
+.loader {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .main-img {
+    width: 40%;
+    height: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/products/7.jpg");
+    border-radius: 4px;
+    box-shadow: rgba(46, 67, 129, 0.2) 0px 8px 24px;
+    position: relative;
+
+    .latter-img {
+      position: absolute;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 2px;
+      box-shadow: rgba(46, 67, 129, 0.2) 0px 8px 24px;
+
+      &:nth-child(1) {
+        left: -20vw;
+        top: -20vh;
+        background-image: url("/products/25.jpg");
+        height: 30vh;
+        width: 10vw;
+      }
+
+      &:nth-child(2) {
+        left: -20vw;
+        bottom: -10vh;
+        background-image: url("/products/19.jpg");
+        height: 15vw;
+        width: 18vw;
+      }
+
+      &:nth-child(3) {
+        right: -20vw;
+        bottom: -9vw;
+        background-image: url("/products/32.jpg");
+        height: 22vw;
+        width: 14vw;
+      }
+
+      &:nth-child(4) {
+        top: -12vw;
+        right: -21vw;
+        background-image: url("/products/15.jpg");
+        height: 18vw;
+        width: 18vw;
+        z-index: 1;
+      }
+
+      
     }
   }
 }
