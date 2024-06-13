@@ -32,28 +32,34 @@ const LoadingPage = ({ setLoading }) => {
     },
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-    return () => clearTimeout(timer);
-  });
+  const itemMainMotion = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
   return (
-    <div className="loader">
-      <motion.div
-        className="main-img"
-        variants={containerMotion}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        onAnimationComplete={() => setLoading(false)}
-      >
-        <motion.div className="latter-img" variants={itemMotion}></motion.div>
-        <motion.div className="latter-img" variants={itemMotion}></motion.div>
-        <motion.div className="latter-img" variants={itemMotion}></motion.div>
-        <motion.div className="latter-img" variants={itemMotion}></motion.div>
+    <motion.div
+      className="loader"
+      variants={containerMotion}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      onAnimationComplete={() => setLoading(false)}
+    >
+      <motion.div className="main-img" variants={itemMainMotion}>
+        <motion.img src="/products/7.jpg" alt="img" layoutId="main-img-one" />
       </motion.div>
-    </div>
+      <motion.div className="latter-img" variants={itemMotion}></motion.div>
+      <motion.div className="latter-img" variants={itemMotion}></motion.div>
+      <motion.div className="latter-img" variants={itemMotion}></motion.div>
+      <motion.div className="latter-img" variants={itemMotion}></motion.div>
+    </motion.div>
   );
 };
 
