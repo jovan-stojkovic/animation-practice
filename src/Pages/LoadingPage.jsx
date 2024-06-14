@@ -1,5 +1,6 @@
-import { useEffect } from "react";
 import { motion } from "framer-motion";
+import "../Styles/Loader.scss";
+
 
 const LoadingPage = ({ setLoading }) => {
   const containerMotion = {
@@ -10,6 +11,7 @@ const LoadingPage = ({ setLoading }) => {
       opacity: 1,
       transition: {
         staggerChildren: 0.5,
+        delayChildren: 0.5,
       },
     },
   };
@@ -38,7 +40,7 @@ const LoadingPage = ({ setLoading }) => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.9,
       },
     },
   };
@@ -53,7 +55,7 @@ const LoadingPage = ({ setLoading }) => {
       onAnimationComplete={() => setLoading(false)}
     >
       <motion.div className="main-img" variants={itemMainMotion}>
-        <motion.img src="/products/7.jpg" alt="img" layoutId="main-img-one" />
+        <motion.img src="/products/11.jpeg" alt="img" layoutId="main-img-one" />
       </motion.div>
       <motion.div className="latter-img" variants={itemMotion}></motion.div>
       <motion.div className="latter-img" variants={itemMotion}></motion.div>

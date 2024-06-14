@@ -1,33 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "./App.scss";
 
-$blue-main: rgb(88, 126, 187);
-$blue-lighter: rgb(106, 139, 199);
-$lightblue: rgb(196, 211, 231);
-$darkblue: rgb(46, 67, 129);
-$red: rgb(235, 101, 100);
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-}
-
-main {
-  width: 100%;
-  min-height: 100vh;
-}
-
-.app {
-  width: 1000px;
-  min-height: 100vh;
-  margin: 0 auto;
-}
-
+//NAVBAR - HEADER
 nav {
   width: 100%;
   height: 60px;
   z-index: 10;
+
   .nav-cont {
     margin: 0 auto;
     height: 100%;
@@ -37,7 +15,6 @@ nav {
     justify-content: space-between;
 
     .logo {
-      display: block;
       height: 40px;
       width: 40px;
       background-image: url("https://www.iconbolt.com/iconsets/magicons/roundruler.svg");
@@ -52,15 +29,12 @@ nav {
     }
 
     .nav-elements {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
+      height: 50px;
 
       .navlinks {
         display: flex;
         align-items: center;
-        justify-content: center;
+        height: 100%;
         gap: 20px;
 
         .products-navlink {
@@ -87,7 +61,7 @@ nav {
               width: 110%;
               border-radius: 10px;
               box-shadow: rgba(46, 67, 129, 0.2) 0px 8px 24px;
-              background-color: rgba(255, 255, 255, 0.1);
+              background-color: rgba(255, 255, 255, 0.3);
               backdrop-filter: blur(5px);
               transition: all 0.2s;
             }
@@ -111,10 +85,10 @@ nav {
           padding: 5px 10px;
           border-radius: 50px;
           transition: background-color 0.5s;
-          border: 1px solid white;
+          border: 1px solid transparent;
 
           &:hover {
-            border: 1px solid $lightblue;
+            border: 1px solid black;
           }
 
           &.active {
@@ -127,12 +101,14 @@ nav {
       button.theme {
         all: unset;
         background-image: url("https://www.iconbolt.com/iconsets/responsive-flat/light-bulb.svg");
-        filter: grayscale(0.4);
+        filter: grayscale(0.8);
         width: 20px;
-        height: 20px;
+        height: 50px;
         background-position: center;
         background-size: contain;
         cursor: pointer;
+        display: flex;
+        background-repeat: no-repeat;
 
         &:hover {
           filter: grayscale(0);
@@ -144,55 +120,12 @@ nav {
   }
 }
 
-.page.home {
-  width: 100%;
-  height: 200vh;
-
-  p {
-    font-size: 100px;
-    letter-spacing: 2px;
-    line-height: 100px;
-    &:nth-child(1) {
-      margin-top: 50px;
-      text-align: left;
-    }
-
-    &:nth-child(2) {
-      font-size: 140px;
-      animation: slide-left 4s linear infinite;
-      color: $darkblue;
-    }
-
-    &:nth-child(3) {
-      text-align: end;
-    }
-  }
-
-  img {
-    position: absolute;
-    height: auto;
-    width: 80%;
-    left: 10%;
-    top: 60vh;
-    border-radius: 5px;
-    z-index: -1;
-    object-fit: cover;
-  }
-}
-
-@keyframes slide-left {
-  0% {
-    transform: translateX(170%);
-  }
-  100% {
-    transform: translateX(-120%);
-  }
-}
-
+//FOOTER
 footer {
   width: 100%;
   height: 100px;
   box-shadow: rgba(46, 67, 129, 0.2) 0px 8px 24px;
+  backdrop-filter: blur(2px);
 
   .footer-cont {
     width: 1000px;
@@ -263,70 +196,6 @@ footer {
           background-image: url("/icons/youtube.svg");
         }
       }
-    }
-  }
-}
-
-.loader {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-
-  .main-img {
-    position: absolute;
-    width: 40vw;
-    height: 50vh;
-    top: 30%;
-    left: 30%;
-    border-radius: 4px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-  }
-
-  .latter-img {
-    position: absolute;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 2px;
-    box-shadow: rgba(46, 67, 129, 0.2) 0px 8px 24px;
-
-    &:nth-child(2) {
-      left: 15vw;
-      top: 10vh;
-      background-image: url("/products/25.jpg");
-      height: 30vh;
-      width: 10vw;
-    }
-
-    &:nth-child(3) {
-      left: 5vw;
-      bottom: 10vh;
-      background-image: url("/products/19.jpg");
-      height: 15vw;
-      width: 18vw;
-    }
-
-    &:nth-child(4) {
-      right: 8vw;
-      bottom: 2vw;
-      background-image: url("/products/32.jpg");
-      height: 22vw;
-      width: 14vw;
-    }
-
-    &:nth-child(5) {
-      top: 8vw;
-      right: 10vw;
-      background-image: url("/products/15.jpg");
-      height: 18vw;
-      width: 18vw;
-      z-index: 1;
     }
   }
 }

@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import "../Styles/HeaderFooter.scss";
 
 const Header = () => {
   const [showHiddenDiv, setShowHiddenDiv] = useState("hide");
@@ -10,10 +11,15 @@ const Header = () => {
   };
 
   const navElementsMotion = {
-    hidden: {},
+    hidden: {
+      opacity: 0,
+    },
     visible: {
+      opacity: 1,
       transition: {
-        staggerChildren: 0.09,
+        duration: 2,
+        delayChildren: 0.8,
+        staggerChildren: 0.3,
       },
     },
   };
@@ -29,7 +35,7 @@ const Header = () => {
       transition: {
         duration: 0.5,
         type: "spring",
-        stiffness: 100,
+        stiffness: 90,
       },
     },
   };

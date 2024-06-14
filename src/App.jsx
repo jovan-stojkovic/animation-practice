@@ -1,4 +1,4 @@
-import "./Style.scss";
+import "./Styles/App.scss";
 import { Routes, Route } from "react-router-dom";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 

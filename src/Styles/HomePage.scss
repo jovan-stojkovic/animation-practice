@@ -1,0 +1,39 @@
+@import "./App.scss";
+
+//HOMEPAGE
+.page.home {
+  width: 100%;
+  height: 200vh;
+
+  p {
+    font-size: 100px;
+    letter-spacing: 10px;
+    line-height: 100px;
+
+    &:nth-child(1) {
+      margin-top: 50px;
+      text-align: left;
+    }
+
+    &:nth-child(2) {
+      text-align: end;
+      z-index: 5;
+    }
+
+    &:nth-child(3) {
+      font-size: 140px;
+      color: $darkblue;
+    }
+  }
+
+  img {
+    position: absolute;
+    height: auto;
+    width: 80%;
+    left: 10%;
+    top: 80vh;
+    border-radius: 5px;
+    z-index: 0;
+    object-fit: cover;
+  }
+}
