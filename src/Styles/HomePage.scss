@@ -8,7 +8,7 @@
   p {
     font-size: 100px;
     letter-spacing: 10px;
-    line-height: 100px;
+    line-height: 120px;
 
     &:nth-child(1) {
       margin-top: 50px;
@@ -21,7 +21,8 @@
     }
 
     &:nth-child(3) {
-      font-size: 140px;
+      font-size: 150px;
+      line-height: 140px;
       color: $darkblue;
     }
   }
