@@ -43,7 +43,7 @@ const Header = () => {
   return (
     <nav>
       <div className="nav-cont">
-        <Link to="/" className="logo"></Link>
+        <a href="/" className="logo"></a>
         <div
           className="nav-elements"
           variants={navElementsMotion}
