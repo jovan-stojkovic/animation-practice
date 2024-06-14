@@ -1,7 +1,24 @@
+import { useEffect } from "react";
 import "../Styles/Category.scss";
 import { motion } from "framer-motion";
 
 const CatFour = () => {
+  useEffect(() => {
+    let elements = document.querySelectorAll(".single-product");
+    VanillaTilt.init(elements, {
+      max: 5,
+      speed: 300,
+      scale: 1.1,
+      glare: true,
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        element.vanillaTilt.destroy();
+      });
+    };
+  }, []);
+
   const products = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
     22,
