@@ -14,7 +14,7 @@ import CatOne from "./Categories/CatOne";
 import CatTwo from "./Categories/CatTwo";
 import CatThree from "./Categories/CatThree";
 import CatFour from "./Categories/CatFour";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import ThemeContext from "./Helpers/ThemeContext";
 
@@ -39,17 +39,26 @@ const App = () => {
               <Header />
               <div className="app">
                 <Routes>
-                  <Route path="/" element={<Home loading={loading} />} />
-                  <Route path="/About" element={<About />} />
-                  <Route path="/Products" element={<Products />} />
-                  <Route path="/Products/category-one" element={<CatOne />} />
-                  <Route path="/Products/category-two" element={<CatTwo />} />
+                  <Route exact path="/" element={<Home loading={loading} />} />
+                  <Route path="/o-nama" element={<About />} />
+                  <Route path="/proizvodi" element={<Products />} />
                   <Route
-                    path="/Products/category-three"
+                    path="/proizvodi/kategorija-jedan"
+                    element={<CatOne />}
+                  />
+                  <Route
+                    path="/proizvodi/kategorija-dva"
+                    element={<CatTwo />}
+                  />
+                  <Route
+                    path="/proizvodi/kategorija-tri"
                     element={<CatThree />}
                   />
-                  <Route path="/Products/category-four" element={<CatFour />} />
-                  <Route path="/Contact" element={<Contact />} />
+                  <Route
+                    path="/proizvodi/kategorija-cetiri"
+                    element={<CatFour />}
+                  />
+                  <Route path="/kontakt" element={<Contact />} />
                 </Routes>
               </div>
               <Footer />

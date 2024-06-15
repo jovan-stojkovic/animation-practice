@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import "../Styles/HeaderFooter.scss";
@@ -8,10 +8,6 @@ import ThemeContext from "../Helpers/ThemeContext";
 const Header = () => {
   const [showHiddenDiv, setShowHiddenDiv] = useState("hide");
   const { theme, toggleTheme } = useContext(ThemeContext);
-
-  const handleHover = () => {
-    setShowHiddenDiv(showHiddenDiv === "hide" ? "show" : "hide");
-  };
 
   const navElementsMotion = {
     hidden: {
@@ -60,7 +56,7 @@ const Header = () => {
             animate="visible"
           >
             <motion.div variants={navlinksMotion}>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">Početna</NavLink>
             </motion.div>
             <motion.div
               variants={navlinksMotion}
@@ -68,21 +64,25 @@ const Header = () => {
               onMouseEnter={() => setShowHiddenDiv("show")}
               onMouseLeave={() => setShowHiddenDiv("hide")}
             >
-              <NavLink to="/Products">Products</NavLink>
+              <NavLink to="/proizvodi">Proizvodi</NavLink>
               <div className={`hidden-div ${showHiddenDiv}`}>
                 <div className="hidden-div-cont">
-                  <NavLink to="/Products/category-one">Kategorija 1</NavLink>
-                  <NavLink to="/Products/category-two">Kategorija 2</NavLink>
-                  <NavLink to="/Products/category-three">Kategorija 3</NavLink>
-                  <NavLink to="/Products/category-four">Kategorija 4</NavLink>
+                  <NavLink to="/proizvodi/kategorija-jedan">
+                    Kategorija 1
+                  </NavLink>
+                  <NavLink to="/proizvodi/kategorija-dva">Kategorija 2</NavLink>
+                  <NavLink to="/proizvodi/kategorija-tri">Kategorija 3</NavLink>
+                  <NavLink to="/proizvodi/kategorija-cetiri">
+                    Kategorija 4
+                  </NavLink>
                 </div>
               </div>
             </motion.div>
             <motion.div variants={navlinksMotion}>
-              <NavLink to="/About">About</NavLink>
+              <NavLink to="/o-nama">O Nama</NavLink>
             </motion.div>
             <motion.div variants={navlinksMotion}>
-              <NavLink to="/Contact">Contact</NavLink>
+              <NavLink to="/kontakt">Kontakt</NavLink>
             </motion.div>
             <motion.div variants={navlinksMotion}>
               <button className="theme" onClick={toggleTheme}></button>
