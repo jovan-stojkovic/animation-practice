@@ -9,7 +9,7 @@ const Products = () => {
     let elements = document.querySelectorAll(".vanilla-section");
     VanillaTilt.init(elements, {
       max: 4,
-      speed: 300,
+      speed: 2000,
       scale: 1.015,
     });
 

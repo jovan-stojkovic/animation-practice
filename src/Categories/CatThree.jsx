@@ -7,7 +7,7 @@ const CatThree = () => {
     let elements = document.querySelectorAll(".single-product");
     VanillaTilt.init(elements, {
       max: 5,
-      speed: 300,
+      speed: 1000,
       scale: 1.1,
       glare: true,
     });
