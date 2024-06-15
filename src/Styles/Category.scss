@@ -43,6 +43,8 @@
       border-radius: 5px;
       position: relative;
       cursor: pointer;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
       &:nth-child(4n) {
         margin-right: 0;
@@ -54,15 +56,15 @@
         height: 0;
         overflow: hidden;
         transition: height 0.5s;
+        background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px);
 
         p {
           padding: 2px;
-          background-color: rgba(0, 0, 0, 0.25);
           border-radius: 2px;
           font-size: 14px;
           color: white;
           text-align: center;
-          backdrop-filter: blur(5px);
 
           &.name {
             font-size: 16px;

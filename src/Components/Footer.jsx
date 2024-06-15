@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../Styles/HeaderFooter.scss";
-
+import { useContext } from "react";
+import ThemeContext from "../Helpers/ThemeContext";
 
 const footerMotion = {
   hidden: {
@@ -17,8 +18,10 @@ const footerMotion = {
 };
 
 const Footer = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <motion.footer
+      className={theme}
       variants={footerMotion}
       initial="hidden"
       whileInView="visible"

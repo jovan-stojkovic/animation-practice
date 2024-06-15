@@ -2,9 +2,12 @@ import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import "../Styles/HeaderFooter.scss";
+import { useContext } from "react";
+import ThemeContext from "../Helpers/ThemeContext";
 
 const Header = () => {
   const [showHiddenDiv, setShowHiddenDiv] = useState("hide");
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const handleHover = () => {
     setShowHiddenDiv(showHiddenDiv === "hide" ? "show" : "hide");
@@ -41,7 +44,7 @@ const Header = () => {
   };
 
   return (
-    <nav>
+    <nav className={theme}>
       <div className="nav-cont">
         <a href="/" className="logo"></a>
         <div
@@ -82,7 +85,7 @@ const Header = () => {
               <NavLink to="/Contact">Contact</NavLink>
             </motion.div>
             <motion.div variants={navlinksMotion}>
-              <button className="theme"></button>
+              <button className="theme" onClick={toggleTheme}></button>
             </motion.div>
           </motion.div>
         </div>

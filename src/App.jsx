@@ -16,34 +16,46 @@ import CatThree from "./Categories/CatThree";
 import CatFour from "./Categories/CatFour";
 import { useEffect, useState } from "react";
 
+import ThemeContext from "./Helpers/ThemeContext";
+
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   return (
     <LayoutGroup type="crossfade">
       <AnimatePresence>
-        {loading ? (
-          <motion.div key="loader">
-            <LoadingPage setLoading={setLoading} />
-          </motion.div>
-        ) : (
-          <main>
-            <Header />
-            <div className="app">
-              <Routes>
-                <Route path="/" element={<Home loading={loading} />} />
-                <Route path="/About" element={<About />} />
-                <Route path="/Products" element={<Products />} />
-                <Route path="/Products/category-one" element={<CatOne />} />
-                <Route path="/Products/category-two" element={<CatTwo />} />
-                <Route path="/Products/category-three" element={<CatThree />} />
-                <Route path="/Products/category-four" element={<CatFour />} />
-                <Route path="/Contact" element={<Contact />} />
-              </Routes>
-            </div>
-            <Footer />
-          </main>
-        )}
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+          {loading ? (
+            <motion.div key="loader">
+              <LoadingPage setLoading={setLoading} />
+            </motion.div>
+          ) : (
+            <main className={theme}>
+              <Header />
+              <div className="app">
+                <Routes>
+                  <Route path="/" element={<Home loading={loading} />} />
+                  <Route path="/About" element={<About />} />
+                  <Route path="/Products" element={<Products />} />
+                  <Route path="/Products/category-one" element={<CatOne />} />
+                  <Route path="/Products/category-two" element={<CatTwo />} />
+                  <Route
+                    path="/Products/category-three"
+                    element={<CatThree />}
+                  />
+                  <Route path="/Products/category-four" element={<CatFour />} />
+                  <Route path="/Contact" element={<Contact />} />
+                </Routes>
+              </div>
+              <Footer />
+            </main>
+          )}
+        </ThemeContext.Provider>
       </AnimatePresence>
     </LayoutGroup>
   );

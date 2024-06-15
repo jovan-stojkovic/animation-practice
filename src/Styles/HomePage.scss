@@ -24,6 +24,7 @@
       font-size: 150px;
       line-height: 140px;
       color: $darkblue;
+      text-align: center;
     }
   }
 
@@ -36,5 +37,6 @@
     border-radius: 5px;
     z-index: 0;
     object-fit: cover;
+    filter: grayscale(0.7);
   }
 }
