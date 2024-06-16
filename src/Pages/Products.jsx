@@ -57,7 +57,9 @@ const Products = () => {
             repudi andae sint, aperiam incidunt distinctio tempora tempor ibus
             perfere ndis magnam pariatur facilis non reic iendis!
           </p>
-          <Link to="/proizvodi/kategorija-jedan">Pogledaj kompletnu ponudu</Link>
+          <Link to="/proizvodi/kategorija-jedan">
+            Pogledaj kompletnu ponudu
+          </Link>
         </div>
         <div className="img-part"></div>
       </motion.section>
@@ -123,7 +125,9 @@ const Products = () => {
             repudi andae sint, aperiam incidunt distinctio tempora tempor ibus
             perfere ndis magnam pariatur facilis non reic iendis!
           </p>
-          <Link to="/proizvodi/kategorija-cetiri">Pogledaj kompletnu ponudu</Link>
+          <Link to="/proizvodi/kategorija-cetiri">
+            Pogledaj kompletnu ponudu
+          </Link>
         </div>
         <div className="img-part"></div>
       </motion.section>

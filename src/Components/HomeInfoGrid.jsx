@@ -22,7 +22,7 @@ const HomeInfoGrid = () => {
       transition: {
         duration: 0.5,
         type: "spring",
-        stiffness: 150,
+        stiffness: 120,
       },
     },
   };
