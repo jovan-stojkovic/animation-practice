@@ -1,9 +1,7 @@
-loading page sa slikama gde se jedna povecava i pojavljuje dole
+
 
 animacija na skrol sa plavom bojom preko elemenata koja se sklanja
 
 tema. jezik?
 
-vanilla-tilt na hover na proizvodima
-
-hiddendiv zindex da se pojavljuje odozgo, tranzicija
+responsiveness

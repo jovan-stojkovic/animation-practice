@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import HomeInfoGrid from "../Components/HomeInfoGrid";
+import Slider from "../Components/Slider";
 import "../Styles/HomePage.scss";
-
 
 const Home = ({ loading }) => {
   const homeContainerMotion = {
@@ -37,8 +38,14 @@ const Home = ({ loading }) => {
       <motion.p variants={pMotion}>Mi ostvarimo.</motion.p>
       <motion.p variants={pMotion}>OSAPLAST</motion.p>
       {!loading && (
-        <div className="transition-img final">
-          <motion.img src="/products/11.jpeg" alt="img" layoutId="main-img-one" />
+        <div className="home-container">
+          <motion.img
+            src="/products/11.jpeg"
+            alt="img"
+            layoutId="main-img-one"
+          />
+          <Slider />
+          <HomeInfoGrid />
         </div>
       )}
     </motion.div>

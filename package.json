@@ -16,6 +16,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.52.0",
     "react-router-dom": "^6.23.1",
+    "react-slideshow-image": "^4.3.1",
     "sass": "^1.77.4",
     "vanilla-tilt": "^1.8.1",
     "yup": "^1.4.0"

@@ -85,7 +85,7 @@ const Header = () => {
               <NavLink to="/kontakt">Kontakt</NavLink>
             </motion.div>
             <motion.div variants={navlinksMotion}>
-              <button className="theme" onClick={toggleTheme}></button>
+              <button className="theme"></button>
             </motion.div>
           </motion.div>
         </div>

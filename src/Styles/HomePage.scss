@@ -4,6 +4,7 @@
 .page.home {
   width: 100%;
   height: 200vh;
+  position: relative;
 
   p {
     font-size: 100px;
@@ -30,13 +31,139 @@
 
   img {
     position: absolute;
-    height: auto;
-    width: 80%;
-    left: 10%;
-    top: 80vh;
+    height: 600px;
+    width: 100%;
+    left: 0;
+    top: 60vh;
     border-radius: 5px;
     z-index: 0;
     object-fit: cover;
-    filter: grayscale(0.7);
+  }
+
+  .slide-container {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 600px;
+    top: 60vh;
+    border-radius: 5px;
+    z-index: 1;
+    object-fit: cover;
+
+    .react-slideshow-container .nav:first-of-type {
+      left: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .react-slideshow-container .nav:last-of-type {
+      right: 20px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  #slide {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+    p.caption {
+      font-size: 22px;
+      letter-spacing: 5px;
+      margin: 0;
+      color: white;
+      padding: 25px 45px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      backdrop-filter: blur(2px);
+    }
+  }
+
+  .home-info-grid {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 80px;
+
+    .home-info-div {
+      height: 350px;
+      width: 24%;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      backdrop-filter: blur(2px);
+
+      .img-cont {
+        height: 50%;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .logo-cont {
+        width: 70px;
+        height: 70px;
+        margin: 20px auto;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      h2 {
+        text-align: center;
+        font-weight: 200;
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+
+      &:nth-child(1) {
+        .img-cont {
+          background-image: url("/photos/iron-fence.webp");
+        }
+
+        .logo-cont {
+          background-image: url("/icons/fence.svg");
+        }
+      }
+
+      &:nth-child(2) {
+        .img-cont {
+          background-image: url("/photos/industrial-table.jpg");
+        }
+
+        .logo-cont {
+          background-image: url("/icons/dining-table.svg");
+        }
+      }
+
+      &:nth-child(3) {
+        .img-cont {
+          background-image: url("/photos/industrial coffee table.jpeg");
+        }
+
+        .logo-cont {
+          background-image: url("/icons/paint.svg");
+          background-size: 80%;
+        }
+      }
+
+      &:nth-child(4) {
+        .img-cont {
+          background-image: url("/photos/montiranje.jpeg");
+        }
+
+        .logo-cont {
+          background-image: url("/icons/wrench.svg");
+          background-size: 80%;
+          
+        }
+      }
+    }
   }
 }
