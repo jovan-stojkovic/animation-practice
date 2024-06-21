@@ -29,6 +29,19 @@ const Contact = () => {
     setSuccess(true);
   };
 
+  const headlineMotion = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 2,
+        duration: 1,
+      },
+    },
+  };
+
   const formMotion = {
     hidden: {
       opacity: 0,
@@ -65,6 +78,11 @@ const Contact = () => {
 
   return (
     <div className="page contact">
+      <motion.h1
+      variants={headlineMotion}
+      initial="hidden"
+      animate="visible"
+      >Kontaktirajte nas.</motion.h1>
       {success ? (
         <div className="success">
           <div className="success-img-cont"></div>

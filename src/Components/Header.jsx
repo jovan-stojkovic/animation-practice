@@ -56,7 +56,12 @@ const Header = () => {
             animate="visible"
           >
             <motion.div variants={navlinksMotion}>
-              <NavLink to="/">Početna</NavLink>
+              <NavLink
+                to="/"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                Početna
+              </NavLink>
             </motion.div>
             <motion.div
               variants={navlinksMotion}
@@ -64,25 +69,64 @@ const Header = () => {
               onMouseEnter={() => setShowHiddenDiv("show")}
               onMouseLeave={() => setShowHiddenDiv("hide")}
             >
-              <NavLink to="/proizvodi">Proizvodi</NavLink>
+              <NavLink
+                to="/proizvodi"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                Proizvodi
+              </NavLink>
               <div className={`hidden-div ${showHiddenDiv}`}>
                 <div className="hidden-div-cont">
-                  <NavLink to="/proizvodi/kategorija-jedan">
+                  <NavLink
+                    to="/proizvodi/kategorija-jedan"
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                  >
                     Kategorija 1
                   </NavLink>
-                  <NavLink to="/proizvodi/kategorija-dva">Kategorija 2</NavLink>
-                  <NavLink to="/proizvodi/kategorija-tri">Kategorija 3</NavLink>
-                  <NavLink to="/proizvodi/kategorija-cetiri">
+                  <NavLink
+                    to="/proizvodi/kategorija-dva"
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                  >
+                    Kategorija 2
+                  </NavLink>
+                  <NavLink
+                    to="/proizvodi/kategorija-tri"
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                  >
+                    Kategorija 3
+                  </NavLink>
+                  <NavLink
+                    to="/proizvodi/kategorija-cetiri"
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                  >
                     Kategorija 4
                   </NavLink>
                 </div>
               </div>
             </motion.div>
             <motion.div variants={navlinksMotion}>
-              <NavLink to="/o-nama">O Nama</NavLink>
+              <NavLink
+                to="/o-nama"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                O Nama
+              </NavLink>
             </motion.div>
             <motion.div variants={navlinksMotion}>
-              <NavLink to="/kontakt">Kontakt</NavLink>
+              <NavLink
+                to="/kontakt"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                Kontakt
+              </NavLink>
             </motion.div>
             <motion.div variants={navlinksMotion}>
               <button className="theme"></button>

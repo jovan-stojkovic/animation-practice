@@ -8,9 +8,9 @@ const Products = () => {
   useEffect(() => {
     let elements = document.querySelectorAll(".vanilla-section");
     VanillaTilt.init(elements, {
-      max: 4,
+      max: 2,
       speed: 2000,
-      scale: 1.015,
+      scale: 1.08,
     });
 
     return () => {
@@ -55,9 +55,15 @@ const Products = () => {
             sapiente dolorum. Est repellat sapiente, itaque nisi quasi at cumque
             nemo ipsa. Possimus esse omnis commodi hic volupt atibus? Ipsa
             repudi andae sint, aperiam incidunt distinctio tempora tempor ibus
-            perfere ndis magnam pariatur facilis non reic iendis!
+            perfere ndis magnam pariatur facilis non reic iendis! Kitaque nisi
+            quasi at cumque nemo ipsa. Possimus esse omnis commodi hic volupt
+            atibus? Ipsa repudi andae sint, aperiam incidunt distinctio tempora
+            tempor ibus perfere ndis magnam pariatur facilis non reic iendis!
           </p>
-          <Link to="/proizvodi/kategorija-jedan">
+          <Link
+            to="/proizvodi/kategorija-jedan"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             Pogledaj kompletnu ponudu
           </Link>
         </div>
@@ -79,9 +85,17 @@ const Products = () => {
             sapiente dolorum. Est repellat sapiente, itaque nisi quasi at cumque
             nemo ipsa. Possimus esse omnis commodi hic volupt atibus? Ipsa
             repudi andae sint, aperiam incidunt distinctio tempora tempor ibus
-            perfere ndis magnam pariatur facilis non reic iendis!
+            perfere ndis magnam pariatur facilis non reic iendis! Kitaque nisi
+            quasi at cumque nemo ipsa. Possimus esse omnis commodi hic volupt
+            atibus? Ipsa repudi andae sint, aperiam incidunt distinctio tempora
+            tempor ibus perfere ndis magnam pariatur facilis non reic iendis!
           </p>
-          <Link to="/proizvodi/kategorija-dva">Pogledaj kompletnu ponudu</Link>
+          <Link
+            to="/proizvodi/kategorija-dva"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            Pogledaj kompletnu ponudu
+          </Link>
         </div>
         <div className="img-part"></div>
       </motion.section>
@@ -101,9 +115,17 @@ const Products = () => {
             sapiente dolorum. Est repellat sapiente, itaque nisi quasi at cumque
             nemo ipsa. Possimus esse omnis commodi hic volupt atibus? Ipsa
             repudi andae sint, aperiam incidunt distinctio tempora tempor ibus
-            perfere ndis magnam pariatur facilis non reic iendis!
+            perfere ndis magnam pariatur facilis non reic iendis! Kitaque nisi
+            quasi at cumque nemo ipsa. Possimus esse omnis commodi hic volupt
+            atibus? Ipsa repudi andae sint, aperiam incidunt distinctio tempora
+            tempor ibus perfere ndis magnam pariatur facilis non reic iendis!
           </p>
-          <Link to="/proizvodi/kategorija-tri">Pogledaj kompletnu ponudu</Link>
+          <Link
+            to="/proizvodi/kategorija-tri"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            Pogledaj kompletnu ponudu
+          </Link>
         </div>
         <div className="img-part"></div>
       </motion.section>
@@ -123,9 +145,15 @@ const Products = () => {
             sapiente dolorum. Est repellat sapiente, itaque nisi quasi at cumque
             nemo ipsa. Possimus esse omnis commodi hic volupt atibus? Ipsa
             repudi andae sint, aperiam incidunt distinctio tempora tempor ibus
-            perfere ndis magnam pariatur facilis non reic iendis!
+            perfere ndis magnam pariatur facilis non reic iendis! Kitaque nisi
+            quasi at cumque nemo ipsa. Possimus esse omnis commodi hic volupt
+            atibus? Ipsa repudi andae sint, aperiam incidunt distinctio tempora
+            tempor ibus perfere ndis magnam pariatur facilis non reic iendis!
           </p>
-          <Link to="/proizvodi/kategorija-cetiri">
+          <Link
+            to="/proizvodi/kategorija-cetiri"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             Pogledaj kompletnu ponudu
           </Link>
         </div>

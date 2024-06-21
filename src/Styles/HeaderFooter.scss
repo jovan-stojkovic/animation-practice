@@ -4,7 +4,6 @@
 nav {
   width: 100%;
   height: 60px;
-  z-index: 10;
 
   .nav-cont {
     margin: 0 auto;
@@ -62,8 +61,11 @@ nav {
               width: 110%;
               border-radius: 10px;
               box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-              background-color: rgba(255, 255, 255, 0.3);
-              backdrop-filter: blur(5px);
+              background-image: linear-gradient(
+                rgba(128, 128, 128, 0.9),
+                rgba(255, 255, 255, 0.9)
+              );
+              backdrop-filter: blur(10px);
               transition: all 0.2s;
             }
 
@@ -127,6 +129,11 @@ nav {
 footer {
   width: 100%;
   height: 60px;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.9)
+  );
+  backdrop-filter: blur(10px);
 
   .footer-cont {
     width: 1000px;

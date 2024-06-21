@@ -1,13 +1,25 @@
 @import "./App.scss";
 
 .page.contact {
-  margin: 100px 0;
   display: flex;
   justify-content: space-between;
+  position: relative;
+
+  h1 {
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    text-align: center;
+    color: gray;
+    font-weight: 300;
+    letter-spacing: 8px;
+    font-size: 30px;
+  }
 
   form {
     width: 60%;
     height: 612.5px;
+    
     input {
       all: unset;
       width: calc(100% - 40px);
