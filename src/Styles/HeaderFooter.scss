@@ -61,11 +61,9 @@ nav {
               width: 110%;
               border-radius: 10px;
               box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-              background-image: linear-gradient(
-                rgba(128, 128, 128, 0.9),
-                rgba(255, 255, 255, 0.9)
-              );
-              backdrop-filter: blur(10px);
+
+              background-color: rgba(255, 255, 255, 0.5);
+              backdrop-filter: blur(7px);
               transition: all 0.2s;
             }
 

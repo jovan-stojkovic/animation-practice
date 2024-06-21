@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import AnimatedIcon from "../Components/AnimatedIcon";
 import HomeInfoGrid from "../Components/HomeInfoGrid";
 import Slider from "../Components/Slider";
 import "../Styles/HomePage.scss";
@@ -35,14 +36,19 @@ const Home = ({ loading }) => {
       animate="visible"
     >
       <motion.p variants={pMotion}>Vi zamislite,</motion.p>
-      <motion.p variants={pMotion}>Mi ostvarimo.</motion.p>
+      <motion.p variants={pMotion}>Mi napravimo.</motion.p>
       <motion.p variants={pMotion}>OSAPLAST</motion.p>
+      <div className="animated-icon">
+        <AnimatedIcon />
+      </div>
+
       {!loading && (
         <div className="home-container">
           <motion.img
             src="/products/11.jpeg"
             alt="img"
             layoutId="main-img-one"
+            className="home-main-img"
           />
           <Slider />
           <HomeInfoGrid />

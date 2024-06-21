@@ -29,7 +29,14 @@
     }
   }
 
-  img {
+  .animated-icon {
+    position: absolute;
+    right: 10px;
+    top: -50px;
+    filter: opacity(0.1);
+  }
+
+  .home-main-img {
     position: absolute;
     height: 600px;
     width: 100%;

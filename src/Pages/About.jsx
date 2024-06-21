@@ -138,7 +138,7 @@ const About = () => {
 
       <motion.section
         className="about"
-        variants={sectionMotionRight}
+        variants={sectionMotion}
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.4, once: true }}
