@@ -17,10 +17,7 @@ main {
   width: 100%;
   min-height: 100vh;
   background-image: url("/background/background-light.jpg");
-}
-
-main.dark {
-  background-image: url("/background/background-dark.jpg");
+  overflow-x: hidden;
 }
 
 .app {
@@ -29,8 +26,3 @@ main.dark {
 }
 
 //general page styling
-
-
-
-
-

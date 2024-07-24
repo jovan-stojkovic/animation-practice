@@ -61,9 +61,7 @@ nav {
               width: 110%;
               border-radius: 10px;
               box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-              background-color: rgba(255, 255, 255, 0.5);
-              backdrop-filter: blur(7px);
+              background-color: rgba(255, 255, 255, 0.9);
               transition: all 0.2s;
             }
 
@@ -74,7 +72,7 @@ nav {
               .hidden-div-cont {
                 padding: 20px;
                 height: 190px;
-                transition: all 1s;
+                transition: all 0.3s;
               }
             }
           }
@@ -86,16 +84,22 @@ nav {
           padding: 5px 10px;
           border-radius: 50px;
           transition: background-color 0.5s;
-          border: 1px solid transparent;
           letter-spacing: 1px;
+          transition: background-color 0.2s, color 0.2s;
+          background-image: linear-gradient(
+            to right,
+            transparent 50%,
+            rgb(194, 194, 194) 50%
+          );
+          background-size: 200% 100%;
+          transition: background-position 0.2s ease;
 
           &:hover {
-            border: 1px solid black;
+            background-position: -100% 0;
           }
 
           &.active {
-            background-color: rgb(194, 194, 194, 0.3);
-            border: 1px solid black;
+            background-color: rgb(194, 194, 194, 0.5);
             backdrop-filter: blur(1px);
           }
         }
@@ -112,11 +116,120 @@ nav {
         cursor: pointer;
         display: flex;
         background-repeat: no-repeat;
+        content-visibility: hidden;
 
         &:hover {
           filter: grayscale(0);
           scale: 1.1;
           transition: all 0.5s;
+        }
+      }
+    }
+
+    .menu-btn {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    .nav-cont {
+      width: 98%;
+
+      .logo {
+        filter: grayscale(0);
+      }
+
+      .nav-elements {
+        position: absolute;
+        display: flex;
+        height: 100vh;
+        width: 140vw;
+        top: 60px;
+        left: 0vw;
+        z-index: 1000;
+        transition: 0.2s;
+
+        .dark-part {
+          height: 100%;
+          width: 100vw;
+          background-color: rgba(0, 0, 0, 0.02);
+          visibility: hidden;
+        }
+
+        .navlinks {
+          flex-direction: column;
+          align-items: baseline;
+          padding: 20px;
+          width: 40vw;
+          background-color: rgba(255, 255, 255, 0.589);
+          backdrop-filter: blur(8px);
+
+          .products-navlink {
+            position: relative;
+
+            .hidden-div {
+              position: static;
+              opacity: 1;
+              padding-top: 10px;
+
+              .hidden-div-cont {
+                height: auto;
+                box-shadow: none;
+                background-color: transparent;
+              }
+
+              &.show {
+                padding-top: 10px;
+
+                .hidden-div-cont {
+                  padding: 0 20px;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
+
+        button.theme {
+          all: unset;
+          background-image: none;
+          filter: grayscale(0);
+          width: auto;
+          height: auto;
+          cursor: pointer;
+          padding: 5px 10px;
+
+          &:hover {
+            filter: grayscale(0);
+            scale: 1;
+          }
+        }
+        &.show {
+          left: -40vw;
+          transition: 0.2s;
+
+          .dark-part {
+            visibility: visible;
+          }
+        }
+      }
+
+      .menu-btn {
+        display: block;
+        all: unset;
+        height: 30px;
+        width: 30px;
+        background-image: url("/icons/menu.svg");
+        background-position: center;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: background-image 0.2s;
+
+        &.show {
+          background-image: url("/icons/menu-close.svg");
         }
       }
     }
@@ -126,12 +239,12 @@ nav {
 //FOOTER
 footer {
   width: 100%;
-  height: 60px;
+  height: 100px;
   background-image: linear-gradient(
-    rgba(255, 255, 255, 0.3),
+    rgb(194, 194, 194, 0.2),
     rgba(255, 255, 255, 0.9)
   );
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(1px);
 
   .footer-cont {
     width: 1000px;

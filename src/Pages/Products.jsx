@@ -1,25 +1,8 @@
 import { Link } from "react-router-dom";
 import "../Styles/Products.scss";
-import VanillaTilt from "vanilla-tilt";
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Products = () => {
-  useEffect(() => {
-    let elements = document.querySelectorAll(".vanilla-section");
-    VanillaTilt.init(elements, {
-      max: 2,
-      speed: 2000,
-      scale: 1.08,
-    });
-
-    return () => {
-      elements.forEach((element) => {
-        element.vanillaTilt.destroy();
-      });
-    };
-  }, []);
-
   const sectionMotion = {
     hidden: {
       opacity: 0,
@@ -32,7 +15,7 @@ const Products = () => {
         delay: 0.4,
         duration: 0.2,
         type: "spring",
-        stiffness: 120,
+        stiffness: 150,
       },
     },
   };

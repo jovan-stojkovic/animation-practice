@@ -7,7 +7,12 @@ import ThemeContext from "../Helpers/ThemeContext";
 
 const Header = () => {
   const [showHiddenDiv, setShowHiddenDiv] = useState("hide");
+  const [menu, setMenu] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
+
+  const handleMenu = () => {
+    setMenu(!menu);
+  };
 
   const navElementsMotion = {
     hidden: {
@@ -44,11 +49,12 @@ const Header = () => {
       <div className="nav-cont">
         <a href="/" className="logo"></a>
         <div
-          className="nav-elements"
+          className={`nav-elements ${menu ? "show" : ""}`}
           variants={navElementsMotion}
           initial="hidden"
           animate="visible"
         >
+          <div className="dark-part" onClick={handleMenu}></div>
           <motion.div
             className="navlinks"
             variants={navElementsMotion}
@@ -58,7 +64,10 @@ const Header = () => {
             <motion.div variants={navlinksMotion}>
               <NavLink
                 to="/"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  handleMenu();
+                }}
               >
                 Početna
               </NavLink>
@@ -71,7 +80,10 @@ const Header = () => {
             >
               <NavLink
                 to="/proizvodi"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  handleMenu();
+                }}
               >
                 Proizvodi
               </NavLink>
@@ -79,33 +91,37 @@ const Header = () => {
                 <div className="hidden-div-cont">
                   <NavLink
                     to="/proizvodi/kategorija-jedan"
-                    onClick={() =>
-                      window.scrollTo({ top: 0, behavior: "smooth" })
-                    }
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      handleMenu();
+                    }}
                   >
                     Kategorija 1
                   </NavLink>
                   <NavLink
                     to="/proizvodi/kategorija-dva"
-                    onClick={() =>
-                      window.scrollTo({ top: 0, behavior: "smooth" })
-                    }
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      handleMenu();
+                    }}
                   >
                     Kategorija 2
                   </NavLink>
                   <NavLink
                     to="/proizvodi/kategorija-tri"
-                    onClick={() =>
-                      window.scrollTo({ top: 0, behavior: "smooth" })
-                    }
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      handleMenu();
+                    }}
                   >
                     Kategorija 3
                   </NavLink>
                   <NavLink
                     to="/proizvodi/kategorija-cetiri"
-                    onClick={() =>
-                      window.scrollTo({ top: 0, behavior: "smooth" })
-                    }
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      handleMenu();
+                    }}
                   >
                     Kategorija 4
                   </NavLink>
@@ -115,7 +131,10 @@ const Header = () => {
             <motion.div variants={navlinksMotion}>
               <NavLink
                 to="/o-nama"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  handleMenu();
+                }}
               >
                 O Nama
               </NavLink>
@@ -123,16 +142,25 @@ const Header = () => {
             <motion.div variants={navlinksMotion}>
               <NavLink
                 to="/kontakt"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  handleMenu();
+                }}
               >
                 Kontakt
               </NavLink>
             </motion.div>
             <motion.div variants={navlinksMotion}>
-              <button className="theme"></button>
+              <button className="theme" onClick={toggleTheme}>
+                {theme === "light" ? "Tema: svetla" : "Tema: tamna"}
+              </button>
             </motion.div>
           </motion.div>
         </div>
+        <button
+          className={`menu-btn ${menu ? "show" : ""}`}
+          onClick={handleMenu}
+        ></button>
       </div>
     </nav>
   );
