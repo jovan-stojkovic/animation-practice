@@ -184,7 +184,7 @@
     .main-text-cont {
       position: relative;
       .big-text-main {
-        font-size: 50px;
+        font-size: 35px;
         letter-spacing: 5px;
         line-height: 45px;
         width: 100vw;
@@ -194,7 +194,7 @@
         }
 
         &:nth-child(3) {
-          font-size: 65px;
+          font-size: 50px;
           line-height: 70px;
           text-align: end;
         }
@@ -202,10 +202,10 @@
 
       .animated-icon {
         position: absolute;
-        left: -100px;
-        top: -170px;
+        left: 30px;
+        top: -180px;
         filter: opacity(0.1);
-        scale: 0.5;
+        scale: 0.4;
       }
     }
 
@@ -218,11 +218,9 @@
       }
 
       .slide-container {
-
         .react-slideshow-container .nav:first-of-type {
           display: none;
         }
-
         .react-slideshow-container .nav:last-of-type {
           display: none;
         }
@@ -232,7 +230,7 @@
         height: 400px;
 
         p.caption {
-          font-size: 14px;
+          font-size: 12px;
           letter-spacing: 3px;
           padding: 15px 30px;
           border-radius: 5px;
@@ -241,84 +239,23 @@
     }
 
     .home-info-grid {
-      width: 100%;
+      margin: 0 auto;
+      width: 90%;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      bottom: 80px;
+      flex-wrap: wrap;
 
       .home-info-div {
-        height: 350px;
-        width: 24%;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        backdrop-filter: blur(2px);
-
-        .img-cont {
-          height: 50%;
-          width: 100%;
-          border-radius: 5px 5px 0 0;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
+        height: 300px;
+        width: calc(50% - 5px);
+        margin-bottom: 10px;
 
         .logo-cont {
-          width: 70px;
-          height: 70px;
-          margin: 20px auto;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
+          width: 40px;
+          height: 40px;
         }
 
         h2 {
-          text-align: center;
-          font-weight: 200;
-          font-size: 18px;
-          letter-spacing: 2px;
-        }
-
-        &:nth-child(1) {
-          .img-cont {
-            background-image: url("/photos/iron-fence.webp");
-          }
-
-          .logo-cont {
-            background-image: url("/icons/fence.svg");
-          }
-        }
-
-        &:nth-child(2) {
-          .img-cont {
-            background-image: url("/photos/industrial-table.jpg");
-          }
-
-          .logo-cont {
-            background-image: url("/icons/dining-table.svg");
-          }
-        }
-
-        &:nth-child(3) {
-          .img-cont {
-            background-image: url("/photos/industrial coffee table.jpeg");
-          }
-
-          .logo-cont {
-            background-image: url("/icons/paint.svg");
-            background-size: 80%;
-          }
-        }
-
-        &:nth-child(4) {
-          .img-cont {
-            background-image: url("/photos/montiranje.jpeg");
-          }
-
-          .logo-cont {
-            background-image: url("/icons/wrench.svg");
-            background-size: 80%;
-          }
+          font-size: 14px;
         }
       }
     }
