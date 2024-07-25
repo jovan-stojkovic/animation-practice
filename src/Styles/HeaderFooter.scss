@@ -145,17 +145,17 @@ nav {
         position: absolute;
         display: flex;
         height: 100vh;
-        width: 145vw;
+        width: 0;
         top: 0;
-        left: 0vw;
+        right: 0;
         z-index: 1000;
-        transition: 0.2s;
+        transition: width 0.1s;
+        overflow: hidden;
 
         .dark-part {
           height: 100%;
-          width: 100vw;
+          width: 55vw;
           background-color: rgba(0, 0, 0, 0.02);
-          visibility: hidden;
         }
 
         .navlinks {
@@ -190,6 +190,27 @@ nav {
               }
             }
           }
+
+          a {
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 50px;
+            transition: background-color 0.5s;
+            letter-spacing: 1px;
+            transition: background-color 0.2s, color 0.2s;
+            background-image: none;
+            transition: background-position 0.2s ease;
+  
+            &:hover {
+              background-position: -100% 0;
+            }
+  
+            &.active {
+              background-color: rgb(194, 194, 194, 0.5);
+              backdrop-filter: blur(1px);
+            }
+          }
         }
 
         button.theme {
@@ -208,12 +229,7 @@ nav {
         }
 
         &.show {
-          left: -40vw;
-          transition: 0.2s;
-
-          .dark-part {
-            visibility: visible;
-          }
+          width: 100%;
         }
       }
 

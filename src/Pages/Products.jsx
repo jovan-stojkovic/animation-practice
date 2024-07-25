@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "../Styles/Products.scss";
+import VanillaTilt from "vanilla-tilt";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Products = () => {
@@ -15,7 +17,7 @@ const Products = () => {
         delay: 0.4,
         duration: 0.2,
         type: "spring",
-        stiffness: 150,
+        stiffness: 120,
       },
     },
   };
