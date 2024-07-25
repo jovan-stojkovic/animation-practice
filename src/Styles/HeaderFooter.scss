@@ -132,8 +132,11 @@ nav {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   nav {
+    position: fixed;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
     .nav-cont {
       width: 98%;
 
@@ -155,7 +158,7 @@ nav {
         .dark-part {
           height: 100%;
           width: 55vw;
-          background-color: rgba(0, 0, 0, 0.02);
+          background-color: rgba(0, 0, 0, 0.05);
         }
 
         .navlinks {
@@ -163,8 +166,7 @@ nav {
           align-items: baseline;
           padding: 80px 20px;
           width: 45vw;
-          background-color: rgba(255, 255, 255, 0.589);
-          backdrop-filter: blur(8px);
+          background-color: rgba(240, 240, 240, 0.97);
 
           .products-navlink {
             position: relative;
@@ -327,19 +329,21 @@ footer {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   footer {
+    height: 150px;
     .footer-cont {
-      width: 98%;
+      width: 100%;
       height: 100%;
-      margin: 0 auto;
       display: flex;
+      flex-direction: column-reverse;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
 
       .left {
         p {
-          font-size: 10px;
+          font-size: 8px;
+          text-align: center;
         }
       }
 
@@ -348,25 +352,22 @@ footer {
 
         h3 {
           font-size: 16px;
+          margin-top: 10px;
         }
 
         p {
-          font-size: 14px;
+          font-size: 10px;
         }
       }
 
       .right {
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        gap: 10px;
+        height: 70px;
+        margin-top: 20px;
 
         a {
-          height: 30px;
-          width: 30px;
+          height: 25px;
+          width: 25px;
           filter: grayscale(0);
-          transition: 0.5s;
-          cursor: pointer;
         }
       }
     }
