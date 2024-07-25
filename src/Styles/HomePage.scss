@@ -3,89 +3,91 @@
 //HOMEPAGE
 .page.home {
   width: 100%;
-  height: 220vh;
-  position: relative;
 
-  p {
-    font-size: 100px;
-    letter-spacing: 10px;
-    line-height: 120px;
+  .main-text-cont {
+    position: relative;
+    .big-text-main {
+      font-size: 100px;
+      letter-spacing: 10px;
+      line-height: 120px;
 
-    &:nth-child(1) {
-      margin-top: 50px;
-      text-align: left;
+      &:nth-child(1) {
+        margin-top: 50px;
+        text-align: left;
+      }
+
+      &:nth-child(2) {
+        text-align: end;
+      }
+
+      &:nth-child(3) {
+        font-size: 150px;
+        line-height: 140px;
+        font-weight: 700;
+        color: $darkblue;
+        text-align: center;
+      }
     }
 
-    &:nth-child(2) {
-      text-align: end;
-      z-index: 5;
-    }
-
-    &:nth-child(3) {
-      font-size: 150px;
-      line-height: 140px;
-      color: $darkblue;
-      text-align: center;
+    .animated-icon {
+      position: absolute;
+      right: 10px;
+      top: -60px;
+      filter: opacity(0.1);
     }
   }
 
-  .animated-icon {
-    position: absolute;
-    right: 10px;
-    top: -50px;
-    filter: opacity(0.1);
-  }
-
-  .home-main-img {
-    position: absolute;
+  .main-img-slider-cont {
+    margin-top: 200px;
     height: 600px;
     width: 100%;
-    left: 0;
-    top: 70vh;
-    border-radius: 5px;
-    z-index: 0;
-    object-fit: cover;
-  }
+    position: relative;
+    margin-bottom: 100px;
 
-  .slide-container {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    height: 600px;
-    top: 70vh;
-    border-radius: 5px;
-    z-index: 1;
-    object-fit: cover;
-
-    .react-slideshow-container .nav:first-of-type {
-      left: 20px;
-      background-color: rgba(255, 255, 255, 0.5);
+    .home-main-img {
+      height: 100%;
+      width: 100%;
     }
 
-    .react-slideshow-container .nav:last-of-type {
-      right: 20px;
-      background-color: rgba(255, 255, 255, 0.5);
+    .slide-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      object-fit: cover;
+
+      .react-slideshow-container .nav:first-of-type {
+        left: 20px;
+        background-color: rgba(255, 255, 255, 0);
+      }
+
+      .react-slideshow-container .nav:last-of-type {
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0);
+      }
     }
-  }
 
-  #slide {
-    height: 600px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+    #slide {
+      height: 600px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
 
-    p.caption {
-      font-size: 22px;
-      letter-spacing: 5px;
-      margin: 0;
-      color: white;
-      padding: 25px 45px;
-      background-color: rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
-      backdrop-filter: blur(2px);
+      p.caption {
+        font-size: 22px;
+        letter-spacing: 5px;
+        margin: 0;
+        color: white;
+        padding: 25px 45px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        backdrop-filter: blur(2px);
+      }
     }
   }
 
@@ -94,7 +96,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
     bottom: 80px;
 
     .home-info-div {
@@ -168,9 +169,11 @@
         .logo-cont {
           background-image: url("/icons/wrench.svg");
           background-size: 80%;
-          
         }
       }
     }
   }
+}
+
+@media only screen and (max-width: 500px) {
 }

@@ -35,22 +35,34 @@ const Home = ({ loading }) => {
       initial="hidden"
       animate="visible"
     >
-      <motion.p variants={pMotion}>Vi zamislite,</motion.p>
-      <motion.p variants={pMotion}>Mi napravimo.</motion.p>
-      <motion.p variants={pMotion}>OSAPLAST</motion.p>
-      <div className="animated-icon">
-        <AnimatedIcon />
+      <div className="main-text-cont">
+        <motion.p variants={pMotion} className="big-text-main">
+          Vi zamislite,
+        </motion.p>
+        <motion.p variants={pMotion} className="big-text-main">
+          Mi napravimo.
+        </motion.p>
+        <motion.p variants={pMotion} className="big-text-main">
+          OSAPLAST
+        </motion.p>
+        <div className="animated-icon">
+          <AnimatedIcon />
+        </div>
       </div>
 
       {!loading && (
         <div className="home-container">
-          <motion.img
-            src="/products/11.jpeg"
-            alt="img"
-            layoutId="main-img-one"
-            className="home-main-img"
-          />
-          <Slider />
+          <div className="main-img-slider-cont">
+            <motion.img
+              src="/products/11.jpeg"
+              alt="img"
+              layoutId="main-img-one"
+              className="home-main-img"
+            />
+
+            <Slider />
+          </div>
+
           <HomeInfoGrid />
         </div>
       )}
