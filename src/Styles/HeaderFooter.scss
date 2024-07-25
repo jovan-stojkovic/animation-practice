@@ -201,11 +201,11 @@ nav {
             transition: background-color 0.2s, color 0.2s;
             background-image: none;
             transition: background-position 0.2s ease;
-  
+
             &:hover {
               background-position: -100% 0;
             }
-  
+
             &.active {
               background-color: rgb(194, 194, 194, 0.5);
               backdrop-filter: blur(1px);
@@ -275,7 +275,10 @@ footer {
     justify-content: space-between;
 
     .left {
-      height: 60px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       p {
         font-size: 12px;
@@ -318,6 +321,52 @@ footer {
         }
         &:nth-child(3) {
           background-image: url("/icons/youtube.svg");
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    .footer-cont {
+      width: 98%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .left {
+        p {
+          font-size: 10px;
+        }
+      }
+
+      .center {
+        letter-spacing: 3px;
+
+        h3 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 10px;
+
+        a {
+          height: 30px;
+          width: 30px;
+          filter: grayscale(0);
+          transition: 0.5s;
+          cursor: pointer;
         }
       }
     }

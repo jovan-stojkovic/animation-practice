@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <div className="center">
           <h3>OsaPlast doo Beograd</h3>
-          <p>25 godina sa Vama</p>
+          <p>30 godina sa Vama</p>
         </div>
         <div className="right">
           <Link target="_blank" to="https://www.instagram.com/"></Link>
